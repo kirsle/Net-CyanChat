@@ -1,0 +1,72 @@
+#!/usr/bin/perl -w
+
+use lib "./lib";
+use strict;
+use warnings;
+use Net::CyanChat::Server;
+
+# Usage:
+#   ccserver <host> <port>
+#   ccserver <port>
+
+my $host = "localhost";
+my $port = 1812;
+if (scalar(@ARGV) > 0) {
+	$port = pop(@ARGV);
+	$host = pop(@ARGV) if scalar(@ARGV) > 0;
+}
+
+# Create the server.
+my $serv = new Net::CyanChat::Server (
+	host  => $host,
+	port  => $port,
+	debug => 1,
+);
+
+# Set the admin password.
+$serv->setPassword ("secret");
+
+# Set some welcome messages.
+$serv->setWelcome (
+	"Welcome to Net::CyanChat::Server v. $Net::CyanChat::Server::VERSION",
+	"",
+	"The `ccserver` program is for testing purposes only.",
+	"It's probably violation of copyright law",
+	"to run a CyanChat server without permission",
+	"from Cyan Worlds, so use at your own risk.",
+);
+
+$serv->connect();
+
+# Loop.
+print "Server running at $host:$port\n\n";
+$serv->start();
+
+__END__
+
+=head1 NAME
+
+ccserver - Perl CyanChat Server
+
+=head1 USAGE
+
+  ccserver [host [port]]
+
+=head1 DESCRIPTION
+
+This is a demonstration CyanChat server script that uses the Net::CyanChat::Server
+module. This script is only here for demo purposes and providers an even safer
+environment to develop clients on than the Cho server.
+
+If the C<host> and/or C<port> arguments aren't given, it defaults to localhost
+on port 1812.
+
+=head1 AUTHOR
+
+Casey Kirsle
+
+=head1 LICENSE
+
+Released under the same terms as Net::CyanChat.
+
+=cut
