@@ -11,7 +11,7 @@ use warnings;
 use IO::Socket;
 use IO::Select;
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 sub new {
 	my $proto = shift;
@@ -518,7 +518,7 @@ Net::CyanChat - Perl interface for connecting to Cyan Worlds' chat room.
 =head1 SYNOPSIS
 
   use Net::CyanChat;
-  
+
   my $cyan = new Net::CyanChat (
         host    => 'cho.cyan.com', # default
         port    => 1812,           # main port--1813 is for testing
@@ -850,7 +850,7 @@ The CyanChat server strictly enforces these rules:
   Be respectful and sensitive to others (please, no platform wars).
   Keep it "G" rated (family viewing), both in language and content.
   And HAVE FUN!
-  
+
   Termination of use can happen without warning!
 
 See L<"CHO"> for what exactly "Termination of use can happen without warning!" means.
@@ -884,6 +884,9 @@ them instead of banning your client. However, the bad language filter still
 exists here.
 
 =head1 CHANGE LOG
+
+  Version 0.07 - Sep 18 2015
+  - Update documentation.
 
   Version 0.06 - Oct 24 2008
   - Broke backwards compatibility *big time*.
@@ -941,12 +944,12 @@ CyanChat Protocol Documentation: http://cho.cyan.com/chat/programmers.html
 
 =head1 AUTHOR
 
-Casey Kirsle, http://www.cuvou.com/
+Noah Petherbridge, http://www.kirsle.net/
 
 =head1 COPYRIGHT AND LICENSE
 
     Net::CyanChat - Perl interface to CyanChat.
-    Copyright (C) 2007  Casey Kirsle
+    Copyright (C) 2007-2015  Noah Petherbridge
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

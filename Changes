@@ -1,5 +1,8 @@
 Revision history for Perl extension Net::CyanChat.
 
+  Version 0.07 - Sep 15 2015
+  - Update documentation.
+
   Version 0.06 - Oct 24 2008
   - Broke backwards compatibility *big time*.
   - Removed the Chat_Buddy_Here method. It was useless and difficult to work with.

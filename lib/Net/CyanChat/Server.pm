@@ -11,7 +11,7 @@ use warnings;
 use IO::Socket;
 use IO::Select;
 
-our $VERSION = '0.03';
+our $VERSION = '0.07';
 
 sub new {
 	my $proto = shift;
@@ -421,16 +421,16 @@ Net::CyanChat::Server - Perl interface for running a CyanChat server.
 =head1 SYNOPSIS
 
   use Net::CyanChat::Server;
-  
+
   our $cho = new Net::CyanChat::Server (
           host  => 'localhost',
           port  => 1812,
           debug => 1,
   );
-  
+
   # Start the server.
   $cho->connect();
-  
+
   # Loop.
   $cho->start();
 
@@ -475,12 +475,12 @@ connections.
 Set the Welcome Messages that are displayed when a user connects to the chat. The default messages are:
 
   Welcome to Net::CyanChat::Server v. <VERSION>
-  
+
   There are only a few simple rules:
        1. Be respectful to other users.
        2. Keep the dialog "G" rated.
        3. And HAVE FUN!
-  
+
   Termination of use can happen without warning!
 
 =head2 setPassword ($PASS)
@@ -547,12 +547,12 @@ CyanChat Protocol Documentation: http://cho.cyan.com/chat/programmers.html
 
 =head1 AUTHOR
 
-Casey Kirsle, http://www.cuvou.com/
+Noah Petherbridge, http://www.kirsle.net/
 
 =head1 COPYRIGHT AND LICENSE
 
     Net::CyanChat - Perl interface to CyanChat.
-    Copyright (C) 2007  Casey Kirsle
+    Copyright (C) 2007-2015  Noah Petherbridge
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

@@ -143,8 +143,8 @@ Options:
 
 Author:
 
-  Casey Kirsle
-  http://www.cuvou.com\/
+  Noah Petherbridge
+  http://www.kirsle.net/
 EOF
 }
 
@@ -854,7 +854,7 @@ From C<tcc --help>:
 
 =head1 AUTHOR
 
-Casey Kirsle -- Same guy who wrote Net::CyanChat.
+Noah Petherbridge -- Same guy who wrote Net::CyanChat.
 
 =head1 LICENSE
 
